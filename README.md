@@ -1,6 +1,31 @@
-# pip install keyboard
-# pip install pybricks-stubs
+# LEGO SPIKE™ Prime Robot Control
 
+This Python script allows you to control a LEGO® Education SPIKE™ Prime robot using keyboard inputs.
+
+## Description
+
+The Python script uses the `keyboard` library to capture keyboard events and send commands to control the robot's movements. It enables you to move the robot forward, backward, turn left, and turn right.
+
+## Prerequisites
+
+Before running the script, make sure you have the following:
+
+- Python installed on your computer.
+- The `keyboard` library installed. You can install it using `pip install keyboard`.
+- The `pybricks-stubs` library installed. You can install it using `pip install pybricks-stubs`.
+## Usage
+
+1. Connect your SPIKE™ Prime robot to your computer.
+2. Run the Python script.
+3. Open `Notpad.exe` or text editor of choice
+4. Use the keyboard and use the following keys to control the robot:
+- `W` for forward
+- `S` for backward
+- `A` for turning left
+- `D` for turning right
+## Code
+
+```python
 import keyboard
 from pybricks.hubs import PrimeHub
 from pybricks.ev3devices import Motor
@@ -53,3 +78,4 @@ def on_key_event(e):
 
 keyboard.hook(on_key_event)
 keyboard.wait()
+```
